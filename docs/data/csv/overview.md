@@ -72,7 +72,7 @@ Below are parameters that can be passed to the CSV reader. These parameters are 
 | `auto_type_candidates` | This option allows you to specify the types that the sniffer will use when detecting CSV column types, e.g., `SELECT * FROM read_csv('csv_file.csv', auto_type_candidates=['BIGINT', 'DATE'])`. The `VARCHAR` type is always included in the detected types (as a fallback option). | `TYPE[]` | `['SQLNULL', 'BOOLEAN', 'BIGINT', 'DOUBLE', 'TIME', 'DATE', 'TIMESTAMP', 'VARCHAR']` |
 | `columns` | A struct that specifies the column names and column types contained within the CSV file (e.g., `{'col1': 'INTEGER', 'col2': 'VARCHAR'}`). Using this option implies that auto detection is not used. | `STRUCT` | (empty) |
 | `compression` | The compression type for the file. By default this will be detected automatically from the file extension (e.g., `t.csv.gz` will use gzip, `t.csv` will use `none`). Options are `none`, `gzip`, `zstd`. | `VARCHAR` | `auto` |
-| `dateformat` | Specifies the date format to use when parsing dates. See [Date Format](../../sql/functions/dateformat). | `VARCHAR` | (empty) |
+| `date_format` | Specifies the date format to use when parsing dates. See [Date Format](../../sql/functions/dateformat). | `VARCHAR` | (empty) |
 | `decimal_separator` | The decimal separator of numbers. | `VARCHAR` | `.` |
 | `delim` or `sep` | Specifies the character that separates columns within each row (line) of the file. | `VARCHAR` | `,` |
 | `escape` | Specifies the string that should appear before a data character sequence that matches the `quote` value. | `VARCHAR` | `"` |
