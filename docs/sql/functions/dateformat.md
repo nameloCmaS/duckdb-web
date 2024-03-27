@@ -42,7 +42,7 @@ COPY dates FROM 'test.csv' (DATEFORMAT '%d/%m/%Y', TIMESTAMPFORMAT '%A, %-d %B %
 ```sql
 -- in read_csv function
 SELECT *
-FROM read_csv('test.csv', dateformat = '%m/%d/%Y');
+FROM read_csv('test.csv', date_format = '%m/%d/%Y');
 ```
 
 ## Format Specifiers
